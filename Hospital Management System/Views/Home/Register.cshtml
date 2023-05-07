@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<style>
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
+<body class="text-center search_plugin_added">
+    <main class="form-signin w-50 m-auto">
+        <form>
+            <h1>Register</h1>
+            <br />
+            <!-- Email -->
+            <div class="form-floating w-60">
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                <label for="email">Email Address</label>
+            </div>
+            <br />
+            <!-- Username -->
+            <div class="form-floating w-60">
+                <input type="text" class="form-control" id="username" placeholder="Username">
+                <label for="username">Username</label>
+            </div>
+            <br />
+            <!-- Password -->
+            <div class="form-floating w-60">
+                <input type="password" class="form-control" id="password" placeholder="Password">
+                <label for="password">Password</label>
+            </div>
+            <br />
+            <!-- National ID -->
+            <div class="form-floating w-60">
+                <input type="text" class="form-control" id="nid" placeholder="National ID" pattern=".{14,14}">
+                <label for="nid">National ID</label>
+            </div>
+            <br />
+            <!-- First Name -->
+            <div class="form-floating w-60">
+                <input type="text" class="form-control" id="fname" placeholder="First Name">
+                <label for="fname">First Name</label>
+            </div>
+            <br />
+            <!-- Last Name -->
+            <div class="form-floating w-60">
+                <input type="text" class="form-control" id="lname" placeholder="Last Name">
+                <label for="lname">Last Name</label>
+            </div>
+            <br />
+            <!-- Age -->
+            <div class="form-floating w-60">
+                <input type="number" class="form-control" id="age" placeholder="Age" max="122">
+                <label for="age">Age</label>
+            </div>
+            <br />
+            <!-- Gender -->
+            <fieldset>
+                <legend>Gender</legend>
+                <!-- Male -->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="male" name="gender" value="male">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <!-- Female -->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="female" name="gender" value="female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+            </fieldset>
+            <br />
+            <!-- Phone Number -->
+            <div class="form-floating w-60">
+                <input type="number" class="form-control" id="pnum" placeholder="Phone Number">
+                <label for="pnum">Phone Number</label>
+            </div>
+            <br />
+            <div>
+                <label>
+                    Already have an account? <a>@Html.ActionLink("Login", "Login", "Home", new { area = "" }, new { @class = "nav-link" })</a>
+                </label>
+            </div>
+            <br />
+            <button class="w-50 btn btn-lg btn-primary" type="submit">Register</button>
+        </form>
+    </main>
+</body>
+

@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<body class="text-center search_plugin_added">
+    <main class="form-signin w-50 m-auto">
+        <form>
+            <h1>Login</h1>
+            <br />
+            <div class="form-floating w-60">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <br />
+            <div class="form-floating w-60">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <br />
+            <div>
+                <label>
+                    Don't have an account? <a>@Html.ActionLink("Register", "Register", "Home", new { area = "" }, new { @class = "nav-link" })</a>
+                </label>
+            </div>
+            <br />
+            <button class="w-50 btn btn-lg btn-primary" type="submit">Sign in</button>
+        </form>
+    </main>
+</body>
