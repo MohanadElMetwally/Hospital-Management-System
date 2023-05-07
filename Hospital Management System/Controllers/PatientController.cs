@@ -13,5 +13,20 @@ namespace Hospital_Management_System.Controllers
         {
             return View();
         }
+
+        public ActionResult Reserve()
+        {
+            return View();
+        }
+
+        public ActionResult CancelAppointment()
+        {
+            return View();
+        }
+
+        public ActionResult ViewDoctors()
+        {
+            return View();
+        }
     }
 }

@@ -183,13 +183,16 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Patient\Index.cshtml" />
+    <Content Include="Views\Patient\Reserve.cshtml" />
+    <Content Include="Views\Patient\CancelAppointment.cshtml" />
+    <Content Include="Views\Patient\ViewDoctors.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Doctor\" />
     <Folder Include="Views\Manager\" />
-    <Folder Include="Views\Patient\" />
     <Folder Include="Views\Receptionist\" />
   </ItemGroup>
   <ItemGroup>
