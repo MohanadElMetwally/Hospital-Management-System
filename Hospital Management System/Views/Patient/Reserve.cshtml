@@ -29,8 +29,8 @@
 <br>
 <br>
 
-<label for="datetime">Select a date:</label>
-<input type="datetime-local" id="datetime" min="" required>
+<label for="date">Select a date:</label>
+<input type="date" id="date" min="" required>
 
 <br>
 <br>
@@ -39,52 +39,7 @@
 
 <script>
     var now = new Date();
-    var datetimeInput = document.getElementById("datetime");
-    datetimeInput.setAttribute("min", now.toISOString().slice(0, 16));
+    var datetInput = document.getElementById("date");
+    dateInput.setAttribute("min", now.toISOString().slice(0, 16));
 </script>
 
-<!--<script>
-  function populateDoctors() {
-    var specialization = document.getElementById("specialization").value;
-    var doctors = document.getElementById("doctor");
-
-    // Clear the current options
-    doctors.innerHTML = "";
-
-    if (specialization === "cardiology") {
-      var option1 = document.createElement("option");
-      option1.text = "Dr. Smith";
-      doctors.add(option1);
-
-      var option2 = document.createElement("option");
-      option2.text = "Dr. Johnson";
-      doctors.add(option2);
-    } else if (specialization === "neurology") {
-      var option1 = document.createElement("option");
-      option1.text = "Dr. Kim";
-      doctors.add(option1);
-
-      var option2 = document.createElement("option");
-      option2.text = "Dr. Lee";
-      doctors.add(option2);
-    } else if (specialization === "dermatology") {
-      var option1 = document.createElement("option");
-      option1.text = "Dr. Brown";
-      doctors.add(option1);
-
-      var option2 = document.createElement("option");
-      option2.text = "Dr. Davis";
-      doctors.add(option2);
-    }
-  }
-
-  function reserve() {
-    var datetime = document.getElementById("datetime").value;
-    alert("Your reservation has been made for " + datetime);
-  }
-
-  // Set the min attribute of the datetime input to the current date and time
-  var now = new Date();
-  var datetimeInput = document.getElementById("datetime");
-  datetimeInput.setAttribute("min", now.toISOString().slice(0,16));
-</script>-->

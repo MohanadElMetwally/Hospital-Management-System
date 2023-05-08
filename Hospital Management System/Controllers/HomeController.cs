@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital_Management_System.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,8 @@ namespace Hospital_Management_System.Controllers
 {
     public class HomeController : Controller
     {
+        Hospital_Management_SystemEntities db = new Hospital_Management_SystemEntities();
+
         public ActionResult Index()
         {
             return View();
@@ -32,8 +35,17 @@ namespace Hospital_Management_System.Controllers
             return View();
         }
 
-        public ActionResult Register()
+        [HttpPost]
+        public ActionResult Register(Person p)
         {
+            if (ModelState.IsValid)
+            {
+                db.People.Add(p);
+                db.SaveChanges();
+                return RedirectToAction("Index","Patient");
+
+            }
+            
             return View();
         }
     }
